@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Webpack 4 Boilerplate</title>
+</head>
+
+<body>
+  <div class="app flex-container">
+    <header class='flex space-between m-25 lg-m-0'>
+      <div class="flex justify-items-left h-40 items-center lg-bg-1 lg-flex-1 lg-p-25">
+        <a href="/" id="main-logo" aria-label="Home" class="">
+          <img src="assets/images/logo.svg" width="80px" />
+        </a>
+      </div>
+      <div class="flex justify-items-right h-40 lg-bg-2 lg-flex-1 lg-p-25">
+        <button class='lg-bg-2'>
+          <img src="assets/images/bag.svg" height="25" width="25" />
+        </button>
+      </div>
+    </header>
+    <div class="body-container lg-container-body 
+    lg-flex">
+      <div class="bg-1 flex-container section lg-p-0">
+        <div class="container-body lg-container-body  lg-items-center lg-justify-items-center lg-flex lg-flex-column ">
+          <h1 class="lg-w-60">Ornare Vulputate Elit</h1>
+          <span class="lg-w-60">Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus
+            commodo, tortor
+            mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacina bibendum nulla sed
+            consectur.
+            Morbi leo risis, porta ac consectetur ac, vestibulum at eros.</span>
+        </div>
+      </div>
+
+      <div class="bg-2 flex-container lg-p-0">
+        <div class="container-body lg-container-body  flex justify-items-center items-center">
+          <div class="product">
+            <div class="flex flex-column justify-items-center items-center">
+              <img src="./assets/images/chicken.png" width='90%' />
+              <h2>Natures Menu Dog Food Can Chicken</h2>
+              <h3>£22.81</h3>
+              <button tabindex="0" class="action-button" data-bag-trigger aria-controls="bag-name"
+                aria-expanded="false">
+                <div class="flex items-center">ADD TO BAG<div id="loader" class="loader"></div>
+                </div>
+              </button>
+
+              <popup-info product-title="Natures Menu Dog Food Can Chicken"></popup-info>
+
+
+            </div>
+          </div>  
+        
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <section class="bag" id="bag-name" data-bag-target>
+      <div class="bag-overlay" data-bag-close tabindex="-1"></div>
+      <div class="bag-wrapper">
+        <div class="bag-header">
+          <h4>
+            Your Bag</h4>
+          <button class="bag-close" data-bag-close aria-label="Close bag"></button>
+        </div>
+        <div class="bag-content flex flex-column">
+          <div class="basket-items flex flex-container">
+            <div class="basket-item flex">
+              <div class="basket-item--image flex-container"> <img src="assets/images/chicken.png" width='90%' /></div>
+              <div class="basket-item--details flex flex-column items-left flex-container">
+                <div class="basket-item--title">Natures Menu Dog Food Can Chicken</div>
+                <h3>£22.81</h3>
+                <div class="basket-item--remove">REMOVE</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="basket-footer">
+            <h5>Subtotal: £21.81</h5>
+            <button class='action-button m-10'>PROCEED TO CHECKOUT</button>
+            <div class="continue-shopping">CONTINUE SHOPPING</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script type='module' src="js/index.js"></script>
+  <script type='module' src="./components/counter.js"></script>
+</body>
+
+</html>
